@@ -183,7 +183,7 @@ public class AccountService {
             return getAccount(accountId);
         }
 
-        Account account = accountRepository.findByIdForUpdate(accountId)
+        Account account = accountRepository.findById(accountId)
                 .orElseThrow(() ->
                         new AccountNotFoundException(
                                 "Account not found: " + accountId
